@@ -1,5 +1,5 @@
-evofox: main.c
-	cc -o evofox main.c $(shell pkg-config --cflags --libs hidapi-libusb)
+evofox-blaze: main.c
+	cc -o $@ $(shell pkg-config --cflags --libs hidapi-libusb) $^
 
 clean:
-	rm evofox
+	rm evofox-blaze
